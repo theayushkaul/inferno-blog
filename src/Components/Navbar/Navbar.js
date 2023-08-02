@@ -14,13 +14,10 @@ export default function Topbar() {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem"><Link className="link" to="/">HOME</Link></li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
+          <li className="topListItem"><Link className="link" to="/about">ABOUT</Link></li>
+          <li className="topListItem"><Link className="link" to="/contact">CONTACT</Link></li>
           <li className="topListItem">
-            <Link className="link" to="/write">
-              WRITE
-            </Link>
-          </li>
+            <Link className="link" to="/write">WRITE</Link></li>
           {user && <li className="topListItem">LOGOUT</li>}
         </ul>
       </div>

@@ -1,21 +1,29 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
-import Logout from "./Components/Logout"
-import Contact from "./Components/Contact"
-import About from "./Components/About"
-import Home from "./HomePage/Home"
-import Write from "./Write/Write"
+import Login from "./pages/Login/Login"
+import Contact from "./pages/Contact/Contact"
+import About from "./pages/About/About"
+import Home from "./pages/HomePage/Home"
+import Write from "./pages/Write/Write"
+import Settings from "./pages/Settings/Settings"
+import Register from "./pages/Register/Register"
+import BlogPost from "./pages/BlogPost/BlogPost";
 function App() {
+  const currentUser = true;
   return (
     <>
     <BrowserRouter>
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home/>} />
+            <Route exact path="/posts" element={<Home/>} />
             <Route exact path="/about" element={<About/>} />
             <Route exact path="/contact" element={<Contact/>} />
-            <Route exact path="/write" element={<Write/>} />
-            <Route exact path="/logout" element={<Logout/>} />
+            <Route exact path="/write" element={currentUser ? <Write /> : <Login />} />
+            <Route exact path="/settings" element={currentUser ? <Settings /> : <Login />} />
+            <Route exact path="/register" element={currentUser ? <Home /> : <Register />} />
+            <Route exact path="/login" element={currentUser ? <Home /> : <Login />} />
+            <Route exact path="/post/:id" element={<BlogPost />} />
           </Routes>
         </BrowserRouter>
     </>

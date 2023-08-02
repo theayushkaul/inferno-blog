@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 .sidebar {
     flex: 3;
     height: fit-content;
     margin: 20px;
     padding-bottom: 30px;
-    background-color: #eedede;
+    background:linear-gradient(#c4e4ef, #ffffff);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -38,6 +40,7 @@
   }
   
   .sidebarItem > p {
+    font-family: 'Varela Round', sans-serif;
     padding: 30px;
   }
   

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Write() {
+export default function Login() {
   return (
     <div>
       

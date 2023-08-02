@@ -69,6 +69,6 @@
     text-decoration: none;
     color: black;
 }
-.link:hover{
+.topListItem > .link:hover{
     color: gray;
 }

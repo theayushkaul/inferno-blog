@@ -1,3 +1,75 @@
-.post{
-    
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+.post {
+    width: 385px;
+    margin: 0px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in;
+  }
+.post:hover{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    transform: scale(1.01);
+    cursor: pointer;
 }
+  .postImg {
+    width: 385px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .postInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .postCat .link{
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+    color: #be9656;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 19px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .postTitle .link{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .postDate {
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-style: italic;
+    font-size: 13px;
+    font-weight: 400;
+    color: #999999;
+    margin-top: 15px;
+  }
+  
+  .postDesc {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    margin-top: 15px;
+    margin-left: 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+  }
