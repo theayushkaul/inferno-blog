@@ -1,5 +1,5 @@
 import "./write.css";
-import {AiOutlineFileAdd } from "react-icons/ai"
+import {AiOutlinePicture } from "react-icons/ai"
 export default function Write() {
   return (
     <div className="write">
@@ -11,7 +11,7 @@ export default function Write() {
       <form className="writeForm">
         <div className="writeFormGroup">
           <label htmlFor="fileInput"><div className="button-container">
-            <i className="writeIcon"><AiOutlineFileAdd/></i>
+            <i className="writeIcon"><AiOutlinePicture/></i>
           </div>
           </label>
           <input id="fileInput" type="file" style={{ display: "none" }} />
