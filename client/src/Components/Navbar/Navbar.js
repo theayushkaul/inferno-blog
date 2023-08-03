@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import {AiFillLinkedin, AiOutlineGithub, AiOutlineInstagram, AiOutlineSearch, AiOutlineWhatsApp} from "react-icons/ai"
-export default function Topbar() {
-  const user = true;
+export default function Topbar(props) {
+  const user = props.user;
   return (
     <div className="top">
       <div className="topLeft">

@@ -9,11 +9,11 @@ import Settings from "./pages/Settings/Settings"
 import Register from "./pages/Register/Register"
 import BlogPost from "./pages/BlogPost/BlogPost";
 function App() {
-  const currentUser = true;
+  const currentUser = false;
   return (
     <>
     <BrowserRouter>
-          <Navbar />
+          <Navbar user = {currentUser}/>
           <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route exact path="/posts" element={<Home/>} />
