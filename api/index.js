@@ -11,7 +11,7 @@ const path = require("path");
 
 dotenv.config();
 app.use(express.json());
-app.use("/images", express.static(path.join(__dirname, "/images")));
+app.use("/images/", express.static(path.join(__dirname, "/images")));
 // Connecting the DB
 mongoose
   .connect(process.env.MONGO_URL)
@@ -20,7 +20,6 @@ mongoose
 
   
 // Use Multer to store images
-
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "images");

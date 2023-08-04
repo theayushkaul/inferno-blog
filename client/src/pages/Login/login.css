@@ -59,17 +59,3 @@
   .loginButton:hover{
     background-color: rgb(234, 73, 73);
   }
-  .loginRegisterButton {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: teal;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    color: white;
-    border-radius: 10px;
-  }
-  .loginRegisterButton:hover{
-    background-color: rgb(15, 99, 99);
-  }

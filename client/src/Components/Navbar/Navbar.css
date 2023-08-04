@@ -67,7 +67,7 @@
 }
 .link{
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 .topListItem > .link:hover{
     color: gray;

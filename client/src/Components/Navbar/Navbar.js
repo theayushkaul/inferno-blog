@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import {AiFillLinkedin, AiOutlineGithub, AiOutlineInstagram, AiOutlineSearch, AiOutlineWhatsApp} from "react-icons/ai"
-export default function Topbar(props) {
-  const user = props.user;
+import { useContext } from "react";
+import { Context } from "../../context/context";
+export default function Topbar() {
+  const {user,dispatch} = useContext(Context)
+  const PF = "http://localhost:5000/images/"
+  const handleLogout = ()=>{
+    dispatch({type:"LOGOUT"})
+  }
   return (
     <div className="top">
       <div className="topLeft">
@@ -18,7 +24,7 @@ export default function Topbar(props) {
           <li className="topListItem"><Link className="link" to="/contact">CONTACT</Link></li>
           <li className="topListItem">
             <Link className="link" to="/write">WRITE</Link></li>
-          {user && <li className="topListItem">LOGOUT</li>}
+          <li className="topListItem" onClick={handleLogout}>{user && "LOGOUT"}</li>
         </ul>
       </div>
       <div className="topRight">
@@ -26,7 +32,7 @@ export default function Topbar(props) {
           <Link className="link" to="/settings">
             <img
               className="topImg"
-              src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src= {PF+user.profilePic}
               alt=""
             />
           </Link>

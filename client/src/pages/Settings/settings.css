@@ -15,6 +15,7 @@
   
   .settingsTitleUpdate {
     font-size: 30px;
+    border-bottom: 1.7px solid lightcoral;
     margin-bottom: 25px;
     color: rgb(232, 78, 78);
   }
